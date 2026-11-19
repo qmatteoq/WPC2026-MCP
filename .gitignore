@@ -1,0 +1,9 @@
+node_modules/
+dist/
+artifacts/
+.env
+config/access.json
+config/package.json
+config/entra-api-patch.json
+config/entra-preauthorize-patch.json
+*.zip

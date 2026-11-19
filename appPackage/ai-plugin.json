@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json",
+  "schema_version": "v2.4",
+  "name_for_human": "Zava Claims",
+  "namespace": "ZavaClaims",
+  "description_for_human": "Read synthetic insurance claims, inspections, and contractors.",
+  "description_for_model": "Use the Zava MCP server for synthetic claims operations. All tools are read-only and enforce the signed-in user's region permissions. Never approve, deny, or pay claims.",
+  "functions": [],
+  "runtimes": [{
+    "type": "RemoteMCPServer",
+    "auth": {
+      "type": "OAuthPluginVault",
+      "reference_id": "${{AGENT_SSO_ID}}"
+    },
+    "spec": { "url": "${{MCP_URL}}" },
+    "run_for_functions": ["*"]
+  }]
+}

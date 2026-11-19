@@ -1,0 +1,35 @@
+{
+  "name": "zava-mcp-ecosystem-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "One Entra-secured Zava MCP server for Cowork and a declarative agent.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc",
+    "start": "node --env-file=.env dist/src/index.js",
+    "dev": "node --env-file=.env --import tsx src/index.ts",
+    "test": "tsx --test test/*.test.ts",
+    "check": "tsc --noEmit",
+    "package:app": "tsx scripts/package.ts",
+    "validate:schemas": "tsx scripts/validate-schemas.ts",
+    "bundle": "tsx scripts/bundle.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "express": "^5.1.0",
+    "jose": "^6.0.11",
+    "zod": "^3.25.76",
+    "zod-to-json-schema": "^3.24.6"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.0.0",
+    "ajv": "^8.17.1",
+    "ajv-draft-04": "^1.0.0",
+    "ajv-formats": "^3.0.1",
+    "fflate": "^0.8.2",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

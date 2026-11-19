@@ -1,0 +1,13 @@
+{
+  "appId": "ea301718-6257-42ee-9e90-d7e94951b328",
+  "version": "1.0.0",
+  "baseUrl": "https://YOUR_PUBLIC_HTTPS_HOST",
+  "connectorSsoId": "YOUR_TEAMS_DEVELOPER_PORTAL_SSO_REGISTRATION_ID",
+  "agentSsoId": "YOUR_TEAMS_DEVELOPER_PORTAL_SSO_REGISTRATION_ID",
+  "developer": {
+    "name": "Your organization",
+    "websiteUrl": "https://YOUR_DOCUMENTATION_HOST",
+    "privacyUrl": "https://YOUR_PRIVACY_POLICY_URL",
+    "termsOfUseUrl": "https://YOUR_TERMS_OF_USE_URL"
+  }
+}

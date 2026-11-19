@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.30/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.30",
+  "version": "${{VERSION}}",
+  "id": "${{APP_ID}}",
+  "developer": {
+    "name": "${{DEVELOPER_NAME}}",
+    "websiteUrl": "${{WEBSITE_URL}}",
+    "privacyUrl": "${{PRIVACY_URL}}",
+    "termsOfUseUrl": "${{TERMS_URL}}"
+  },
+  "name": {
+    "short": "Zava Claims",
+    "full": "Zava Claims - One MCP, Two Experiences"
+  },
+  "description": {
+    "short": "Explore synthetic Zava claims through Cowork and a focused Copilot agent.",
+    "full": "Session demo: one Entra-protected MCP server exposes synthetic insurance claims, inspections, and contractors. Cowork uses the packaged connector and claims-review skill; the Zava Claims Assistant uses the same server as an agent-scoped action."
+  },
+  "icons": { "color": "color.png", "outline": "outline.png" },
+  "accentColor": "#123B45",
+  "agentSkills": [{ "folder": "skills/zava-claims-review" }],
+  "agentConnectors": [{
+    "id": "zava-claims-mcp",
+    "displayName": "Zava Claims MCP",
+    "description": "Live synthetic Zava home-insurance claims in USD, claim status and reserves, inspections, and available contractors. Use for claims analysis and operations questions. Per-user access is restricted to assigned North/South regions. Read-only; no claim approvals or payments.",
+    "toolSource": {
+      "remoteMcpServer": {
+        "mcpServerUrl": "${{MCP_URL}}",
+        "authorization": {
+          "type": "OAuthPluginVault",
+          "referenceId": "${{CONNECTOR_SSO_ID}}"
+        },
+        "mcpToolDescription": { "file": "toolDescription.json" }
+      }
+    }
+  }],
+  "copilotAgents": {
+    "declarativeAgents": [{
+      "id": "zavaClaimsAssistant",
+      "file": "declarativeAgent.json"
+    }]
+  }
+}

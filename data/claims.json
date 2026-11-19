@@ -1,0 +1,28 @@
+{
+  "synthetic": true,
+  "asOf": "2026-11-18",
+  "currency": "USD",
+  "claims": [
+    { "id": "CLM-1001", "policyholder": "Avery Example", "region": "North", "type": "Storm", "status": "Open", "amount": 42000, "reserve": 35000, "filedDate": "2026-11-02", "summary": "Roof damage after a storm. Inspection overdue; estimate exceeds reserve by USD 7000.", "inspectionId": "INS-101" },
+    { "id": "CLM-1002", "policyholder": "Blake Sample", "region": "North", "type": "Water", "status": "Under Review", "amount": 18500, "reserve": 20000, "filedDate": "2026-11-07", "summary": "Burst pipe affected kitchen flooring. Inspection complete; awaiting repair quote.", "inspectionId": "INS-102" },
+    { "id": "CLM-1003", "policyholder": "Casey Demo", "region": "South", "type": "Fire", "status": "Open", "amount": 96000, "reserve": 80000, "filedDate": "2026-11-05", "summary": "Garage fire. Inspection overdue; estimate exceeds reserve by USD 16000.", "inspectionId": "INS-103" },
+    { "id": "CLM-1004", "policyholder": "Drew Fiction", "region": "South", "type": "Storm", "status": "Approved", "amount": 27000, "reserve": 27000, "filedDate": "2026-10-25", "summary": "Hail damage to roof. Approved by a human adjuster in the synthetic source system.", "inspectionId": "INS-104" },
+    { "id": "CLM-1005", "policyholder": "Ellis Placeholder", "region": "North", "type": "Fire", "status": "Closed", "amount": 12000, "reserve": 0, "filedDate": "2026-10-01", "summary": "Minor smoke damage. Closed claim; do not treat zero reserve as an active funding gap.", "inspectionId": null },
+    { "id": "CLM-1006", "policyholder": "Finley Test", "region": "South", "type": "Water", "status": "Open", "amount": 31500, "reserve": 25000, "filedDate": "2026-11-16", "summary": "Water leak in utility room. Inspection scheduled for the snapshot date.", "inspectionId": "INS-106" }
+  ],
+  "inspections": [
+    { "id": "INS-101", "claimId": "CLM-1001", "scheduledDate": "2026-11-15", "status": "Scheduled", "inspector": "North Inspector A (synthetic)" },
+    { "id": "INS-102", "claimId": "CLM-1002", "scheduledDate": "2026-11-12", "status": "Completed", "inspector": "North Inspector B (synthetic)" },
+    { "id": "INS-103", "claimId": "CLM-1003", "scheduledDate": "2026-11-17", "status": "Scheduled", "inspector": "South Inspector A (synthetic)" },
+    { "id": "INS-104", "claimId": "CLM-1004", "scheduledDate": "2026-11-03", "status": "Completed", "inspector": "South Inspector B (synthetic)" },
+    { "id": "INS-106", "claimId": "CLM-1006", "scheduledDate": "2026-11-18", "status": "Scheduled", "inspector": "South Inspector A (synthetic)" }
+  ],
+  "contractors": [
+    { "id": "CTR-101", "name": "North Roof Demo", "region": "North", "specialty": "Storm", "available": true },
+    { "id": "CTR-102", "name": "North Water Demo", "region": "North", "specialty": "Water", "available": true },
+    { "id": "CTR-103", "name": "North Fire Demo", "region": "North", "specialty": "Fire", "available": false },
+    { "id": "CTR-201", "name": "South Fire Demo", "region": "South", "specialty": "Fire", "available": true },
+    { "id": "CTR-202", "name": "South Roof Demo", "region": "South", "specialty": "Storm", "available": true },
+    { "id": "CTR-203", "name": "South Water Demo", "region": "South", "specialty": "Water", "available": true }
+  ]
+}

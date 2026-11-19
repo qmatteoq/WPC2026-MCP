@@ -1,0 +1,6 @@
+{
+  "users": {
+    "REPLACE_WITH_PRESENTER_ENTRA_OBJECT_ID": ["North", "South"],
+    "REPLACE_WITH_SECOND_DEMO_USER_ENTRA_OBJECT_ID": ["North"]
+  }
+}
